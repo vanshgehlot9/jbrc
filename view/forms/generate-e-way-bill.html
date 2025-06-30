@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate E-way Bill - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link rel="stylesheet" href="/view/styles/eway.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate E-way Bill</h1>
+        <form id="eWayBillForm" class="e-way-bill-form">
+            <div class="form-group">
+                <label for="transactionType">Transaction Type</label>
+                <select id="transactionType" name="transactionType" required>
+                    <option value="">Select Transaction Type</option>
+                    <option value="outward">Outward</option>
+                    <option value="inward">Inward</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="documentType">Document Type</label>
+                <select id="documentType" name="documentType" required>
+                    <option value="">Select Document Type</option>
+                    <option value="taxInvoice">Tax Invoice</option>
+                    <option value="billOfSupply">Bill of Supply</option>
+                    <option value="deliveryChallan">Delivery Challan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="documentNumber">Document Number</label>
+                <input type="text" id="documentNumber" name="documentNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="documentDate">Document Date</label>
+                <input type="date" id="documentDate" name="documentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="fromGstin">From GSTIN</label>
+                <input type="text" id="fromGstin" name="fromGstin" required>
+            </div>
+            <div class="form-group">
+                <label for="toGstin">To GSTIN</label>
+                <input type="text" id="toGstin" name="toGstin" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="totalValue">Total Value of Goods</label>
+                <input type="number" id="totalValue" name="totalValue" step="0.01" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="hsnCode">HSN Code</label>
+                <input type="text" id="hsnCode" name="hsnCode" required>
+            </div>
+            <div class="action-buttons full-width">
+                <button type="submit">Generate E-way Bill</button>
+                <button type="button" onclick="window.close()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="/public/js/generate-e-way-bill.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Way Bill</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="navbar">E-Way Bill Module</div>
+    <div class="container">
+
+    <nav class="navbar">
+        <div class="nav-brand">Transport</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#">Booking</a>
+            <a href="#">Loading</a>
+            <a href="#">Despatch</a>
+            <a href="#">Receive</a>
+            <a href="#">Delivery</a>
+            <a href="/dashboard/ledger.html">Accounting</a>
+            <a href="/dashboard/statement.html">Statement</a>
+            <a href="#">Master</a>
+        </div>
+        <div class="nav-right">
+            <span>KOLKATA</span>
+            <a href="/dashboard/notification.html"><i class="fas fa-bell"></i></a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>E-Way Bill Management</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="window.location.href='/forms/generate-e-way-bill.html'">
+                    <i class="fas fa-plus"></i>
+                    Generate New E-Way Bill
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-search"></i>
+                    Search E-Way Bills
+                </button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>E-Way Bill No.</th>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Consignor</th>
+                        <th>Consignee</th>
+                        <th>Value</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+               
+            </table>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>

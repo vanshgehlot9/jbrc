@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Daily Report - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link rel="stylesheet" href="/view/styles/generate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Daily Report</h1>
+        <form id="dailyReportForm" class="report-form">
+            <div class="form-group">
+                <label for="reportDate">Report Date</label>
+                <input type="date" id="reportDate" name="reportDate" required>
+            </div>
+            <div class="form-group">
+                <label for="reportType">Report Type</label>
+                <select id="reportType" name="reportType" required>
+                    <option value="">Select Report Type</option>
+                    <option value="sales">Sales Report</option>
+                    <option value="inventory">Inventory Report</option>
+                    <option value="financial">Financial Report</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button type="submit">Generate Report</button>
+                <button type="button" onclick="window.close()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="/public/js/generate-daily-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Weekly Summary - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link rel="stylesheet" href="/view/styles/schedule.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Weekly Summary</h1>
+        <form id="weeklySummaryForm" class="report-form">
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="recipientEmail">Recipient Email</label>
+                <input type="email" id="recipientEmail" name="recipientEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="summaryType">Summary Type</label>
+                <select id="summaryType" name="summaryType" required>
+                    <option value="">Select Summary Type</option>
+                    <option value="sales">Sales Summary</option>
+                    <option value="operations">Operations Summary</option>
+                    <option value="financial">Financial Summary</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button type="submit">Schedule Summary</button>
+                <button type="button" onclick="window.close()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="/public/js/schedule-weekly-summary.js"></script>
+</body>
+</html>

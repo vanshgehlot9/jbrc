@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JODHPUR BOMBAY ROAD CARRIER</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>JODHPUR BOMBAY ROAD CARRIER</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html"><i class="material-icons">dashboard</i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/view-bilties"><i class="material-icons">description</i>View Bilties</a>
+                    </li>
+                    <li>
+                        <a href="/view/dashboard/e-way-bill.html"><i class="material-icons">receipt</i>E-way Bill</a>
+                    </li>
+                    <li>
+                        <a href="/view/dashboard/ledger.html"><i class="material-icons">book</i>Ledger</a>
+                    </li>
+                    <li>
+                        <a href="/view/dashboard/statement.html"><i class="material-icons">assessment</i>Statement</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard <span class="year-badge">2025-2026</span></h1>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="material-icons">shopping_cart</i></div>
+                    <div class="stat-content">
+                        <h3>Today's Sales</h3>
+                        <p class="stat-number">0</p>
+                    </div>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="material-icons">date_range</i></div>
+                    <div class="stat-content">
+                        <h3>Sales in last 7 Days</h3>
+                        <p class="stat-number">19</p>
+                    </div>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="material-icons">calendar_month</i></div>
+                    <div class="stat-content">
+                        <h3>Sales in last 30 Days</h3>
+                        <p class="stat-number">19</p>
+                    </div>
+                </div>
+                <div class="stat-card card">
+                    <div class="stat-icon"><i class="material-icons">calendar_today</i></div>
+                    <div class="stat-content">
+                        <h3>Sales in last 90 Days</h3>
+                        <p class="stat-number">19</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Quick Actions -->
+            <section class="quick-actions card">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button class="btn primary">Create Bilty</button>
+                    <button class="btn secondary">Generate E-way Bill</button>
+                    <button class="btn primary">Export to Excel</button>
+                    <button class="btn secondary">Challan</button>
+                </div>
+            </section>
+
+            <!-- Search and Filter -->
+            <section class="search-filter card ">
+                <h2>Search & Filter</h2>
+                <div class="filter-controls">
+                    <input type="text" placeholder="Search by keyword">
+                    <select>
+                        <option value="">Filter by Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <input type="date">
+                    <button class="btn primary">Search</button>
+                </div>
+            </section>
+
+            <!-- Analytics Chart -->
+            <section class="analytics card">
+                <h2>Analytics Dashboard</h2>
+                <div class="chart-container">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Reports and Reminders -->
+            <section class="reports-reminders card">
+                <h2>Automated Reports and Reminders</h2>
+                <div class="report-buttons">
+                    <button class="btn primary">Generate Daily Report</button>
+                    <button class="btn secondary">Send Payment Reminder</button>
+                    <button class="btn primary">Schedule Weekly Summary</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/public/js/scripts.js"></script>
+    <script src="/public/js/create-bilty.js"></script>
+    <script src="/public/js/"></script>
+
+</body>
+</html>
+<script src="/js/scripts.js"></script>

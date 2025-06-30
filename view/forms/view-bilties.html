@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bilties - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="main-header">
+                <div class="header-nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/create-bilty" class="nav-link">Create Bilty</a>
+                    <a href="/view-bilties" class="nav-link active">View Bilties</a>
+                </div>
+                <h1>View Bilties</h1>
+                <p>Manage and view all bilty documents</p>
+            </div>
+            
+            <div class="card">
+                <div class="filter-controls">
+                    <input type="text" id="searchInput" placeholder="Search bilties..." class="search-input">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="date">Sort by Date</option>
+                    </select>
+                    <button id="exportBtn" class="btn primary">Export to Excel</button>
+                </div>
+                
+                <div class="table-responsive">
+                    <table id="biltiesTable" class="bilties-table">
+                        <thead>
+                            <tr>
+                                <th>Bilty No</th>
+                                <th>Date</th>
+                                <th>Consignor</th>
+                                <th>Consignee</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="biltiesTableBody">
+                            <!-- Bilty rows will be injected here by JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="loading" class="loading">Loading bilties...</div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/view-bilties.js"></script>
+</body>
+</html> 

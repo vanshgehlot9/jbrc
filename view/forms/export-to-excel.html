@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export to Excel - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link rel="stylesheet" href="/view/styles/exporttoexcel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Export to Excel</h1>
+        <form id="exportForm">
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="reportType">Report Type</label>
+                <select id="reportType" name="reportType" required>
+                    <option value="">Select Report Type</option>
+                    <option value="bilty">Bilty Report</option>
+                    <option value="ewayBill">E-way Bill Report</option>
+                    <option value="financial">Financial Report</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button type="submit">Export to Excel</button>
+                <button type="button" onclick="window.close()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="/public/js/export-to-excel.js"></script>
+</body>
+</html>

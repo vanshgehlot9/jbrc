@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statement</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="navbar">Statement Module</div>
+    <div class="container">
+
+    <nav class="navbar">
+        <div class="nav-brand">Transport</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#">Booking</a>
+            <a href="#">Loading</a>
+            <a href="#">Despatch</a>
+            <a href="#">Receive</a>
+            <a href="#">Delivery</a>
+            <a href="/dashboard/ledger.html">Accounting</a>
+            <a href="/dashboard/statement.html" class="active">Statement</a>
+            <a href="#">Master</a>
+        </div>
+        <div class="nav-right">
+            <span>KOLKATA</span>
+            <a href="/dashboard/notification.html"><i class="fas fa-bell"></i></a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Statement</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i>
+                    Generate PDF
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Email Statement
+                </button>
+            </div>
+        </div>
+
+        <div class="statement-summary">
+            <div class="summary-item">
+                <span class="summary-label">Total Revenue:</span>
+                <span class="summary-value">₹ 500,000.00</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Total Expenses:</span>
+                <span class="summary-value">₹ 300,000.00</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Net Profit:</span>
+                <span class="summary-value profit">₹ 200,000.00</span>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Revenue</th>
+                        <th>Expenses</th>
+                        <th>Profit/Loss</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-02-01</td>
+                        <td>Transport Services</td>
+                        <td>50000.00</td>
+                        <td>30000.00</td>
+                        <td class="profit">20000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-02</td>
+                        <td>Transport Services</td>
+                        <td>45000.00</td>
+                        <td>25000.00</td>
+                        <td class="profit">20000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2025-02-03</td>
+                        <td>Transport Services</td>
+                        <td>55000.00</td>
+                        <td>35000.00</td>
+                        <td class="profit">20000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>

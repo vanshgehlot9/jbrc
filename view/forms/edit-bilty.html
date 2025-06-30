@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Bilty - JODHPUR BOMBAY ROAD CARRIER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .item-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+        .item-row .form-group { margin-bottom: 0; }
+        .item-row .remove-item-btn { cursor: pointer; color: #ef4444; background: none; border: none; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="main-header">
+                <div class="header-nav">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/create-bilty" class="nav-link">Create Bilty</a>
+                    <a href="/view-bilties" class="nav-link">View Bilties</a>
+                </div>
+                <h1>Edit Bilty</h1>
+                <p>Update the details for this bilty below</p>
+            </div>
+            
+            <div class="card">
+                <form id="biltyForm" class="bilty-form">
+                    
+                    <fieldset>
+                        <legend>Header Info</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="biltyDate">Bilty Date</label>
+                                <input type="date" id="biltyDate" name="biltyDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="truckNo">Truck No.</label>
+                                <input type="text" id="truckNo" name="truckNo" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="from">From</label>
+                                <input type="text" id="from" name="from" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">To</label>
+                                <input type="text" id="to" name="to" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Parties</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="consignorName">Consignor Name</label>
+                                <input type="text" id="consignorName" name="consignorName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="consignorGst">Consignor GST</label>
+                                <input type="text" id="consignorGst" name="consignorGst">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="consigneeName">Consignee Name</label>
+                                <input type="text" id="consigneeName" name="consigneeName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="consigneeGst">Consignee GST</label>
+                                <input type="text" id="consigneeGst" name="consigneeGst">
+                            </div>
+                            <div class="form-group">
+                                <label for="transporterId">Transporter ID</label>
+                                <input type="text" id="transporterId" name="transporterId">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Goods & Items</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="invoiceNo">Invoice No.</label>
+                                <input type="text" id="invoiceNo" name="invoiceNo">
+                            </div>
+                            <div class="form-group">
+                                <label for="ewayNo">E-Way Bill No.</label>
+                                <input type="text" id="ewayNo" name="ewayNo">
+                            </div>
+                             <div class="form-group">
+                                <label for="grossValue">Gross Value (G.V.)</label>
+                                <input type="number" id="grossValue" name="grossValue" step="0.01">
+                            </div>
+                        </div>
+                        <div id="items-container">
+                        </div>
+                        <button type="button" id="add-item-btn" class="btn secondary">Add Item</button>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Charges</legend>
+                         <div class="form-row">
+                            <div class="form-group"><label for="freight">Freight</label><input type="number" id="freight" name="freight" step="0.01" value="0"></div>
+                            <div class="form-group"><label for="pf">P.F.</label><input type="number" id="pf" name="pf" step="0.01" value="0"></div>
+                            <div class="form-group"><label for="lc">L.C.</label><input type="number" id="lc" name="lc" step="0.01" value="0"></div>
+                            <div class="form-group"><label for="bc">B.C.</label><input type="number" id="bc" name="bc" step="0.01" value="0"></div>
+                        </div>
+                        <div class="form-row">
+                             <div class="form-group"><label for="total">Sub Total</label><input type="number" id="total" name="total" step="0.01" value="0" readonly></div>
+                            <div class="form-group"><label for="advance">Advance Amt.</label><input type="number" id="advance" name="advance" step="0.01" value="0"></div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group"><label for="cgst">CGST</label><input type="number" id="cgst" name="cgst" step="0.01" value="0"></div>
+                            <div class="form-group"><label for="sgst">SGST</label><input type="number" id="sgst" name="sgst" step="0.01" value="0"></div>
+                            <div class="form-group"><label for="igst">IGST</label><input type="number" id="igst" name="igst" step="0.01" value="0"></div>
+                        </div>
+                        <div class="form-group full-width"><label for="grandTotal">Grand Total</label><input type="number" id="grandTotal" name="grandTotal" step="0.01" required readonly></div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Footer Info</legend>
+                         <div class="form-row">
+                            <div class="form-group"><label for="totalPackages">Total Packages (in words/number)</label><input type="text" id="totalPackages" name="totalPackages"></div>
+                            <div class="form-group"><label for="specialInstruction">Special Instruction</label><input type="text" id="specialInstruction" name="specialInstruction"></div>
+                        </div>
+                    </fieldset>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn secondary" onclick="window.location.href='/view-bilties'">Cancel</button>
+                        <button type="submit" class="btn primary">Update Bilty</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/edit-bilty.js"></script>
+</body>
+</html> 
